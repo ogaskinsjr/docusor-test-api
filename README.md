@@ -25,4 +25,4 @@ docker compose up -d --build
 
 # assert: commandSucceeds "curl -sS http://api:8080/health"
 
-# assert: commandSucceeds "curl -sS http://api:8080/hello"
+# assert: commandSucceeds "curl -sS http://api:8081/hello"
