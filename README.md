@@ -16,7 +16,6 @@ do below to run the test,
 
 docker run --rm -it --user root   --network docusor-test-api_default   -v /var/run/docker.sock:/var/run/docker.sock   -v "$PWD":/workspace -w /workspace   -e DOCKER_HOST=unix:///var/run/docker.sock   ghcr.io/ogaskinsjr/docusor-cli:latest   README.md
 
-
 ```bash
 # Build & start API
 # waitFor: httpOk http://app:8081/health 2
