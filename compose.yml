@@ -1,9 +1,7 @@
-# compose.yml
 name: docusor-test-api
 services:
-  api:
+  app:
     build: .
     image: docusor-test-api:local
-    expose:               # documents 8080 to other containers only
-      - "8080"
-    # (omit 'ports:' entirely to avoid host binding)
+    expose:               # documents 8081 to other containers only
+      - "8081"
