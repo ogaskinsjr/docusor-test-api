@@ -12,17 +12,12 @@ docker compose -p docusor-test-api down -v
 
 when your done
 
-to run the test, do 
+do below to run the test,
+
 docker run --rm -it --user root   --network docusor-test-api_default   -v /var/run/docker.sock:/var/run/docker.sock   -v "$PWD":/workspace -w /workspace   -e DOCKER_HOST=unix:///var/run/docker.sock   ghcr.io/ogaskinsjr/docusor-cli:latest   README.md
 
 ```bash
 # Build & start API
-docker compose up -d --build
-
-# waitFor: logContains container:api "server listening on" 25
-# waitFor: httpOk http://api:8080/health
-
-
-# assert: commandSucceeds "curl -sS http://api:8080/health"
-
-# assert: commandSucceeds "curl -sS http://api:8080/hello"
+# waitFor: httpOk http://app:8081/health 6
+# assert: httpOk http://app:8081/health
+# assert: commandSucceeds "curl -sS http://app:8081/hello"
