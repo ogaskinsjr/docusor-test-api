@@ -5,6 +5,3 @@ services:
     image: docusor-test-api:local
     expose:               # documents 8081 to other containers only
       - "8081"
-    ports:
-      - "8081:8081"
-    # (omit 'ports:' entirely to avoid host binding)
