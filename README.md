@@ -20,4 +20,4 @@ docker run --rm -it --user root   --network docusor-test-api_default   -v /var/r
 # Build & start API
 # waitFor: httpOk http://app:8081/health 2
 # assert: httpOk http://app:8081/health
-# assert: commandSucceeds "curl -sS http://app:8080/hello"
+# assert: commandSucceeds "curl -sS http://app:8081/hello"
