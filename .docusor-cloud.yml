@@ -1,2 +1,2 @@
-# image: ghcr.io/ogaskinsjr/repo:{{sha}}
-# entry: README.md
+image: ghcr.io/ogaskinsjr/repo:{{sha}}
+entry: README.md
